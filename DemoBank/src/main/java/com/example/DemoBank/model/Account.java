@@ -2,26 +2,30 @@ package com.example.DemoBank.model;
 
 import com.example.DemoBank.status.AccountStatus;
 
-class Account {
+public class Account {
     private long balance;
     private AccountStatus status;
-    Account(long balance) {
+    public Account(long balance) {
         this.balance = balance;
         this.status = AccountStatus.NOTACTIVE;
     }
 
-    void block() {
+    public void block() {
         this.status = AccountStatus.BLOCKED;
     }
 
-    void active() {
+     public void notactive() {
+        this.status = AccountStatus.BLOCKED;
+    }
+
+    public void active() {
         this.status = AccountStatus.ACTIVE;
     }
  
     long getBalance(){
         return balance;
     }
-    AccountStatus getStatus(){
+    public AccountStatus getStatus(){
         return status;
     }
 }
