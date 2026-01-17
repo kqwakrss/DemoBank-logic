@@ -15,7 +15,7 @@ public class Account {
     }
 
      public void notactive() {
-        this.status = AccountStatus.BLOCKED;
+        this.status = AccountStatus.NOTACTIVE;
     }
 
     public void active() {
@@ -27,6 +27,9 @@ public class Account {
     }
     public AccountStatus getStatus(){
         return status;
+    }
+    public void deposit(long amount){
+        this.balance += amount;
     }
 }
 
